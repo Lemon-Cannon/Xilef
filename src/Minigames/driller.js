@@ -162,7 +162,10 @@ Driller.Ores = [
     new DrillerOre("Sampo", 1100000, 97, 27),
     new DrillerOre("True knowledge", 1500000, 98, 28),
     new DrillerOre("Chicken Nuggets", 2000000, 99, 29),
-    new DrillerOre("The end...", 3000000, 100, 30),
+    new DrillerOre("Candy", 3000000, 100, 29),
+    new DrillerOre("Something Shiny", 3500000, 101, 29),
+    new DrillerOre("A very smooth rock", 4500000, 102, 29),
+    new DrillerOre("The end...", 5000000, 103, 30),
     new DrillerOre("how", -999999999, 0, 69),
 ]
 Driller.tiers = [
@@ -310,7 +313,7 @@ Commands.driller = new Command("Dig deeper and deeper to find the treasures\n\n"
                 EconomySystem.award("driller", message)
             } else if (EconomySystem.buy(Driller.tiers[EconomySystem.driller - 1], message, "Your driller reached tier " + (EconomySystem.driller + 1) + "! (" + Driller.tiers[EconomySystem.driller - 1] + " DogeCoins spent)", "You don't have enough DogeCoins to upgrade your driller (" + Driller.tiers[EconomySystem.driller - 1] + " DogeCoins needed)")) {
                 EconomySystem.driller = EconomySystem.driller + 1
-                if (EconomySystem.driller == 29) {
+                if (EconomySystem.driller == 30) {
                     EconomySystem.award("driller", message)
                 }
             }
